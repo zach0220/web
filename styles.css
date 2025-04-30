@@ -1,0 +1,45 @@
+body {
+    background-color: #121212; /* 暗色背景 */
+    color: #ffffff; /* 白色文字 */ 
+    overflow: hidden; /* 隱藏滾動條 */
+}
+
+.container {
+    text-align: center; /* 文字置中 */
+}
+
+h1 {
+    font-size: 3em; /* 增加標題字體大小 */
+    margin-bottom: 20px; /* 標題下方間距 */
+}
+
+p {
+    font-size: 1.5em;
+}
+
+ul {
+    list-style-type: none; /* 移除列表項目符號 */
+    padding: 0; /* 移除內邊距 */
+}
+
+li {
+    margin: 10px 0; /* 列表項目上下間距 */
+}
+
+.button {
+    display: inline-block; /* 使按鈕顯示為行內塊 */
+    width: 200px; /* 固定按鈕寬度 */
+    height: 50px; /* 固定按鈕高度 */
+    padding: 10px; /* 按鈕內邊距 */
+    background-color: #1e90ff; /* 按鈕背景顏色 */
+    color: #ffffff; /* 按鈕文字顏色 */
+    text-decoration: none; /* 移除下劃線 */
+    border-radius: 5px; /* 按鈕圓角 */
+    font-size: 1.2em; /* 按鈕文字大小 */
+    transition: background-color 0.3s; /* 背景顏色過渡效果 */
+    line-height: 50px; /* 垂直置中 */
+}
+
+.button:hover {
+    background-color: #007acc; /* 滑鼠懸停時改變背景顏色 */
+}
