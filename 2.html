@@ -1,53 +1,209 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-t">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Have a Nice Day</title>
-  <style> 
-    body {
-      background: #fff;
-    }
-    h1 { 
-      margin: 10px; 
-      padding: 0; 
-      width: max-content; 
-      font-family: Impact, Arial Black, sans-serif; 
-      font-size: 80px; 
-      line-height: 1;
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花卉品種介紹</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+    <style>
+     body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+     }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .headline {
+            font-size: 45px;
+            margin: 10px;
+            font-family: "ZCOOL QingKe HuangYou", sans-serif;
+            color: #333;
+        }
+        .options {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        .option {
+            margin: 10px;
+            padding: 10px 20px;
+            background: linear-gradient(90deg, #4b6cb7, #182848);
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .option:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .flower-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .flower-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .flower-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        .flower-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .flower-name {
+            padding: 15px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+        .topnav {
+            background-color: #4b6cb7;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .topnav a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            transition: all 0.3s ease;
+        }
+        .topnav a:hover {
+            background-color: #3a5a9b;
+            color: white;
+        }
+        .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      padding: 10px 20px;
+      color: white;
     }
 
-    .a0 { 
-      color: black;
-      background: linear-gradient(#f00, #f90, #fde0, #0c0, #09f); 
+    .navbar .menu {
+      display: flex;
+      gap: 20px;
     }
 
-    .a1 { 
-      color: transparent; 
-      background: linear-gradient(#f00, #f90, #fde, #0c0, #09f); 
-      background-clip: text; 
-      -webkit-background-clip: text;
+    .navbar a {
+      color: white;
+      text-decoration: none;
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
     }
 
-    .a2 {  
-      color: transparent; 
-      background: linear-gradient(#f00 50%, #fa0 50%); 
-      background-clip: text;
-      -webkit-background-clip: text;
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px 0;
     }
+    @media (max-width: 768px) {
+      .navbar .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        width: 100%;
+      }
 
-    .a3 { 
-      color: transparent; 
-      background: url(Classic_Rainbow_Flag.svg.png) center/cover; 
-      background-clip: text; 
-      -webkit-background-clip: text;
-    } 
-  </style>
+      .navbar .menu.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+        
+        @media only screen and (max-width: 480px) {
+            .flower-grid {
+                grid-template-columns: 1fr;
+            }
+            .headline {
+                font-size: 35px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1 class="a0">HAVE A NICE DAY !</h1>
-  <h1 class="a1">HAVE A NICE DAY !</h1>
-  <h1 class="a2">HAVE A NICE DAY !</h1>
-  <h1 class="a3">HAVE A NICE DAY !</h1>
+    <nav class="navbar">
+        <div class="logo">我的網站</div>
+        <div class="hamburger" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="menu" id="menu">
+          <a href="#">首頁</a>
+          <a href="#">關於我們</a>
+          <a href="#">服務</a>
+          <a href="#">聯絡</a>
+        </div>
+      </nav>
+    <div class="container">
+        <div class="header">
+            <div class="headline">柴犬介紹</div>
+        </div>
+        
+        <div class="options">
+            <div class="option">選項一</div>
+            <div class="option">選項二</div>
+            <div class="option">選項三</div>
+            <div class="option">選項四</div>
+            <div class="option">選項五</div>
+            <div class="option">選項六</div>
+        </div>
+        
+        <div class="flower-grid">
+            <div class="flower-card">
+                <img src="1200px-Shiba_inu_taiki.jpg" alt="百合花" class="flower-image">
+                <div class="flower-name">狗</div>
+            </div>
+            <div class="flower-card">
+                <img src="20181227SHIBU005_600.jpg" alt="野薑花" class="flower-image">
+                <div class="flower-name">跟狗</div>
+            </div>
+            <div class="flower-card">
+                <img src="柴柴-1.jpg" alt="康乃馨" class="flower-image">
+                <div class="flower-name">還是狗</div>
+            </div>
+            <div class="flower-card">
+                <img src="images.jpg" alt="玫瑰花" class="flower-image">
+                <div class="flower-name">又是狗</div>
+            </div>
+            <div class="flower-card">
+                <img src="image.jpg" alt="玫瑰花" class="flower-image">
+                <div class="flower-name">小狗狗</div>
+            </div>
+            <div class="flower-card">
+                <img src="38fd0746221775e3ec2c94ba5fa6c0d6.jpg" alt="玫瑰花" class="flower-image">
+                <div class="flower-name">又一隻小狗狗</div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
