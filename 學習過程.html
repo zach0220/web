@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成果報告</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(90deg ,rgb(119, 0, 255) ,rgb(153, 41, 138));
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            font-family: '標楷體';
+        }
+        .box ,.box2 {
+            max-width: 550px;
+            height: auto;
+            background-color: rgb(85, 187, 228);
+            margin: auto;
+            border: 2px solid rgb(129, 95, 224);
+            border-radius: 5px;
+        }
+        .box2 {
+            background-color: rgb(240, 17, 217);
+        }
+        .a {
+            font-size: 20px;
+            display: none;
+        }
+        .b {
+            font-size: 20px;
+        }
+        .topen {
+            overflow: hidden;
+            background-color: rgb(34, 131, 241);
+            border-radius: 2px;
+        }
+        .topen a {
+            font-size: 20px;
+            font-weight: 400;
+            font-family: 'ZCOOL KuaiLe';
+            color: rgb(255, 255, 173);
+            padding: 25px 30px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .topen a:hover {
+            font-size: 24px;
+            background-color: rgb(255, 255, 173);
+            color: rgb(0, 204, 255);
+            font-family: 'ZCOOL KuaiLe';
+            text-decoration-line: underline;
+            text-decoration-color: rgb(0, 204, 255);
+        }
+        .imger {
+            border: 2px solid rgb(255, 155, 170);
+            filter: drop-shadow(0 5px 10px #000);
+            transition: all 0.5s ease;
+            border-radius: 10px;
+            width: 350px;
+            height: auto;
+        }
+        .imger:hover {
+            transform: translateY(10PX);
+            filter: drop-shadow(0 5px 10px #0a0909);
+        }
+        .hamburger {
+            display: none;
+            width: 30px;
+            height: 30px;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 20px;
+            cursor: pointer;
+        }
+        .hamburger span {
+            background-color: rgb(13, 228, 243);
+            border: 2px solid rgba(10, 94, 221, 0.781);
+            border-radius: 2px;
+            height: 3px;
+            width: auto;
+        }
+        @media screen and (max-width:750px) {
+            .topen {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .topen.k {
+                display: flex;
+                flex-direction: column;
+            }
+            .topen a {
+                border-top: 2px solid rgb(255, 155, 170);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>學習過程</h1>
+    <div class="hamburger" onclick="louis2()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="topen">
+        <a href="成果展示.html">報告封面</a>
+        <a href="加分作業.html">成果展示</a>
+        <a href="學習過程.html">學習過程</a>
+        <a href="心得與反思.html">心得與反思</a>
+    </div>
+    <br>
+    <div class="box">
+        <h1 onclick="louis()">過程都很不會但我有很多好朋友所以才能活到現在但我是真的覺得不會做QAQ</h1>
+</div>
